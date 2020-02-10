@@ -86,3 +86,24 @@ newP[7].textContent = siteContent["contact"]["email"];
 //footer
 
 newP[8].textContent = siteContent["footer"]["copyright"];
+
+//2 new nav items
+const nav = document.querySelector("nav");
+const preNav = document.createElement('a');
+const appNav = document.createElement('a');
+preNav.textContent = "Before";
+appNav.textContent = "After";
+nav.prepend(preNav);
+nav.append(appNav);
+
+//stretch
+
+h1New.style.color = "orange";
+
+document.querySelector(".cta button").addEventListener("click", function(){
+  buttonNew.style.backgroundColor = "Green";
+  buttonNew.style.color = "orange";
+  buttonNew.textContent = "Hello there";
+  h1New.textContent = "You're Awesome";
+  h1New.style.color = "Gold";
+});
