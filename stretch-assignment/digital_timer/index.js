@@ -3,13 +3,21 @@ let secOnes = document.querySelector('#secondOnes');
 let msHun = document.querySelector('#msHundreds');
 let msTens = document.querySelector('#msTens');
 
-let counter = 0;
-let msHunNum = 0;
-let secOnesNum = 0;
-let secTensNum = 0;
+let digits = document.querySelectorAll('.digits div');
+
+
 let msTensCount = setInterval(1);
 
 function startTimer(){
+    digits.forEach(digit => digit.classList.remove('redDigit'));
+    msTens.textContent = 0;
+    msHun.textContent = 0;
+    secOnes.textContent = 0;
+    secTens.textContent = 0;
+    let counter = 0;
+    let msHunNum = 0;
+    let secOnesNum = 0;
+    let secTensNum = 0;
 
     startButton.disabled=true;
   msTensCount = setInterval( () => {
@@ -40,7 +48,6 @@ function startTimer(){
 
             if (secTensNum == 1) {
               msTens.textContent = 0;
-              let digits = document.querySelectorAll('.digits div');
                   digits.forEach(digit => digit.classList.add('redDigit'));
                   startButton.disabled=false;
               clearInterval(msTensCount);
