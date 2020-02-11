@@ -100,7 +100,7 @@ nav.append(appNav);
 
 h1New.style.color = "orange";
 
-document.querySelector(".cta button").addEventListener("click", function(){
+buttonNew.addEventListener("click", function(){
   buttonNew.style.backgroundColor = "Green";
   buttonNew.style.color = "orange";
   buttonNew.textContent = "Hello there";
