@@ -18,13 +18,13 @@ function startTimer(){
     let msHunNum = 0;
     let secOnesNum = 0;
     let secTensNum = 0;
-
     startButton.disabled=true;
+
   msTensCount = setInterval( () => {
    ++counter;
    msTens.textContent = counter;
    
-    if (counter == 1) {
+    if (counter == 10) {
       msHunNum++;
       msHun.textContent = msHunNum;
 
@@ -60,7 +60,6 @@ function startTimer(){
      msTens.textContent = counter;
    }
 }, 10);
-    return 0;
 }
 
 const startButton = document.createElement("button");
